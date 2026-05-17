@@ -316,11 +316,18 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <i data-lucide="users" class="w-12 h-12 text-pink-500 mb-6"></i>
-                                <h3 class="text-sm font-black uppercase tracking-widest">Stakeholders</h3>
+                                <i data-lucide="key-round" class="w-12 h-12 text-pink-500 mb-4"></i>
+                                <h3 class="text-sm font-black uppercase tracking-widest">Core Solution</h3>
                             </div>
                             <div class="flip-card-back p-8">
-                                <p class="text-xs font-black uppercase leading-relaxed">Staff (Cashiers), Store Manager, and Supermarket Owners are the primary users and decision-makers.</p>
+                                <p class="text-xs font-black uppercase leading-relaxed">
+                                     <ul class="text-[10px] font-bold text-left space-y-3 uppercase">
+                                    <li>- Automated Product & Price Registration</li>
+                                    <li>- Structured Customer Data Management</li>
+                                    <li>- Flexible Electronic Invoicing</li>
+                                    <li>- Comprehensive Performance Reports</li>
+                                    <li>- Enhanced Supplier Communication</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -335,20 +342,21 @@
                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-pink-500 mb-6 shadow-sm"><i data-lucide="cpu"></i></div>
                         <h3 class="text-xl font-black uppercase tracking-widest">Functional</h3>
                         <div id="functional-content" class="hidden mt-8 text-xs space-y-3 font-bold uppercase text-left w-full max-w-xs mx-auto">
-                            <p class="border-b border-white/20 pb-2">Automatic Product Entry</p>
-                            <p class="border-b border-white/20 pb-2">Debt Data Management</p>
-                            <p class="border-b border-white/20 pb-2">Digital Invoicing</p>
-                            <p>Detailed Sales Reports</p>
+                            <p class="border-b border-white/20 pb-2">Fast POS interface (pos)</p>
+                            <p class="border-b border-white/20 pb-2">Payment methods, printing and sending invoices and receipts</p>
+                            <p class="border-b border-white/20 pb-2">Preparation of reports</p>
+                            <p class="border-b border-white/20 pb-2">Registration of customer data, debts and payments</p>
+                            <p>Management of offers and discounts </p>
                         </div>
                     </div>
                     <div id="req-nf" class="req-card p-12 bg-slate-50 rounded-[40px] cursor-pointer text-center flex flex-col items-center justify-center min-h-[300px]" onclick="toggleReq('req-nf', 'non-functional')">
                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-800 mb-6 shadow-sm"><i data-lucide="lock"></i></div>
                         <h3 class="text-xl font-black uppercase tracking-widest">Non-Functional</h3>
                         <div id="non-functional-content" class="hidden mt-8 text-xs space-y-3 font-bold uppercase text-left w-full max-w-xs mx-auto">
-                            <p class="border-b border-white/20 pb-2">Operational Speed < 1s</p>
-                            <p class="border-b border-white/20 pb-2">High System Usability</p>
-                            <p class="border-b border-white/20 pb-2">Automated Backups</p>
-                            <p>Encrypted Debt Records</p>
+                            <p class="border-b border-white/20 pb-2">Easy to use and training</p>
+                            <p class="border-b border-white/20 pb-2">High System Usability & performance</p>
+                            <p class="border-b border-white/20 pb-2">Integration with other systems</p>
+                            <p>Data security</p>
                         </div>
                     </div>
                 </div>
@@ -568,29 +576,29 @@
         // 1. تعريف البيانات المأخوذة من ملف المشروع
         const coreImpactData = [
             {
-                type: "benefits",
-                title: "System Benefits",
-                subtitle: "Core Advantages of Automation",
+                type: "Current",
+                title: "Current System ",
+                subtitle: "Traditional System",
                 accentColor: "pink",
                 icon: "sparkles",
                 points: [
-                    "Transforms the vulnerable manual diary system into a secure digital database powerhouse.",
-                    "Provides a fast POS (Point of Sale) experience using integrated barcode and QR scanning.",
-                    "Guarantees data safety through automated daily cloud backups, eliminating paper damage risks.",
-                    "Enables precise management of customer debts and profiles with instant retrieval."
+                    "Checkout Speed: <br>  Slow and sometimes depends on memorizing product prices.",
+                    "Customer Loyalty:  <br>  No reward or loyalty system available.",
+                    "Reports: <br> Paper-based and time-consuming to prepare.",
+                
                 ]
             },
             {
-                type: "improvements",
-                title: "Key Improvements",
-                subtitle: "Operational Enhancements",
+                type: "Proposed ",
+                title: "Proposed System",
+                subtitle: "Smart System",
                 accentColor: "rose",
                 icon: "trending-up",
                 points: [
-                    "Boosts overall supermarket operational efficiency by more than 85%.",
-                    "Achieves 99.9% data accuracy, removing manual calculation errors in end-of-month counts.",
-                    "Introduces real-time stock and expiry date alerts to prevent inventory losses.",
-                    "Reduces checkout queue times and simplifies staff training to under 30 minutes."
+                    "Checkout Speed: <br> Instant barcode scanning with QR Code support.",
+                    "Customer Loyalty:  <br>  Loyalty system with points and personalized discounts for each customer.",
+                    "Reports: <br>  Real-time dashboard for profits and reports.",
+                    
                 ]
             }
         ];
@@ -750,20 +758,16 @@
             <div class="reveal-card">
                 <div class="card-header">
                     <div class="icon-circle">
-                        <i class="fas fa-database"></i>
+                        <i class="fa-solid fa-diagram-project"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-pink-800">Database Integrity</h3>
-                    <p class="text-pink-500 mt-2">Technical Insight</p>
+                    <h3 class="text-2xl font-bold text-pink-800">Challenges</h3>
+                    <p class="text-pink-500 mt-2"> Informal Workflows</p>
                    
                 </div>
                 <div class="card-content">
-                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-check-circle mr-2"></i> Normalization</h4>
-                    <p class="mb-4">Proper normalization was critical for handling complex financial records and debt management without data redundancy.</p>
-                    <ul class="text-sm space-y-2 opacity-90">
-                        <li>• Accurate debt tracking per customer.</li>
-                        <li>• Real-time stock updates.</li>
-                        <li>• Eliminating manual entry errors.</li>
-                    </ul>
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-check-circle mr-2"></i> Informal Workflows</h4>
+                    <p class="mb-4"> Analysis Challenge. </p>
+                    <p>Understanding the current manual workflow inside the supermarket was difficult because many operations were performed informally.</p>
                 </div>
             </div>
 
@@ -771,16 +775,16 @@
             <div class="reveal-card">
                 <div class="card-header">
                     <div class="icon-circle">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fa-solid fa-sitemap"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-pink-800">Strategic Planning</h3>
-                    <p class="text-pink-500 mt-2">Business Management</p>
+                    <h3 class="text-2xl font-bold text-pink-800">Challenges</h3>
+                    <p class="text-pink-500 mt-2">Diagram Consistency</p>
                     
                 </div>
                 <div class="card-content">
-                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-lightbulb mr-2"></i> Scalability</h4>
-                    <p class="mb-4">Transitioning from a manual system to digital requires a scalable architecture to accommodate future growth.</p>
-                    <p class="text-sm italic">"The system should not only solve today's problems but anticipate tomorrow's needs like multi-branch support."</p>
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-lightbulb mr-2"></i> Diagram Consistency</h4>
+                    <p class="mb-4">Iterative Modeling.</p>
+                    <p class="text-sm italic">"Designing consistent diagrams such as DFD, ERD, and Use Case Diagrams required several revisions and modifications to accurately reflect the system."</p>
                 </div>
             </div>
 
@@ -788,20 +792,16 @@
             <div class="reveal-card">
                 <div class="card-header">
                     <div class="icon-circle">
-                        <i class="fas fa-users-cog"></i>
+                        <i class="fa-solid fa-database"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-pink-800">User Experience</h3>
-                    <p class="text-pink-500 mt-2">Human-Centric Design</p>
+                    <h3 class="text-2xl font-bold text-pink-800">Challenges</h3>
+                    <p class="text-pink-500 mt-2">System Modeling</p>
                    
                 </div>
                 <div class="card-content">
-                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-smile mr-2"></i> UI Simplicity</h4>
-                    <p class="mb-4">Since employees were used to manual journals, the POS interface needed to be extremely intuitive to ensure adoption.</p>
-                    <ul class="text-sm space-y-2 opacity-90">
-                        <li>• Minimum clicks for a sale.</li>
-                        <li>• Easy search for debt records.</li>
-                        <li>• Automated barcode scanning.</li>
-                    </ul>
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-smile mr-2"></i> System Modeling</h4>
+                    <p class="mb-4">Logical Framework Development.</p>
+                    <p> Transforming real supermarket operations into a structured computerized system model took significant time and continuous improvements.</p>
                 </div>
             </div>
 
@@ -809,16 +809,16 @@
             <div class="reveal-card">
                 <div class="card-header">
                     <div class="icon-circle">
-                        <i class="fas fa-file-invoice-dollar"></i>
+                        <i class="fa-solid fa-chart-line"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-pink-800">Debt Control</h3>
-                    <p class="text-pink-500 mt-2">Financial Security</p>
+                    <h3 class="text-2xl font-bold text-pink-800">Team Experiences</h3>
+                    <p class="text-pink-500 mt-2">Business Evolution</p>
                     
                 </div>
                 <div class="card-content">
-                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-shield-alt mr-2"></i> Risk Management</h4>
-                    <p class="mb-4">We learned that debt management is the backbone of small retail businesses like Al-Bayara.</p>
-                    <p class="text-sm">Automated alerts for overdue payments drastically reduce financial losses compared to manual diaries.</p>
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-shield-alt mr-2"></i> Business Evolution</h4>
+                    <p class="mb-4">Real-World Analysis.</p>
+                    <p class="text-sm"> The project helped us understand that system analysis is not just about creating diagrams, but also about understanding the real business process, identifying weaknesses, and proposing suitable solutions.</p>
                 </div>
             </div>
 
@@ -826,16 +826,32 @@
             <div class="reveal-card">
                 <div class="card-header">
                     <div class="icon-circle">
-                        <i class="fas fa-users"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-pink-800">Team Collaboration</h3>
-                    <p class="text-pink-500 mt-2">Internal Growth</p>
+                    <h3 class="text-2xl font-bold text-pink-800">Team Experiences</h3>
+                    <p class="text-pink-500 mt-2">Digital Shift</p>
                     
                 </div>
                 <div class="card-content">
-                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-sync mr-2"></i> Role Definition</h4>
-                    <p class="mb-4">The project highlighted the importance of defining clear roles (Manager vs. Employee) in the system hierarchy.</p>
-                    <p class="text-sm">"Clear permissions prevent internal errors and ensure accountability in the Al-Bayara team."</p>
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-sync mr-2"></i> Digital Shift</h4>
+                    <p class="mb-4">System Transformation.</p>
+                    <p class="text-sm">"We learned how to analyze manual systems and transform them into computerized systems that improve efficiency, accuracy, and organization."</p>
+                </div>
+            </div>
+
+            <div class="reveal-card">
+                <div class="card-header">
+                    <div class="icon-circle">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pink-800">Team Experiences</h3>
+                    <p class="text-pink-500 mt-2">System Value</p>
+                    
+                </div>
+                <div class="card-content">
+                    <h4 class="text-xl font-bold mb-4"><i class="fas fa-sync mr-2"></i> System Value</h4>
+                    <p class="mb-4">Management Support.</p>
+                    <p class="text-sm">"The proposed system can help reduce human errors, save time, and support better decision-making for the management."</p>
                 </div>
             </div>
 
